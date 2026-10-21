@@ -64,42 +64,41 @@
     <main>
         <h2>FORMULARZ KONTAKTOWY</h2>
 
-        <form action="index.html" method="POST">
-
+        <form action="zasob.php" method="POST">
 
             <label>
                 Wpisz swoje imie: <br>
-                <input type="text">
+                <input type="text" name="name">
             </label>
             <br>
             <label>
                 Wpisz swoje nazwisko: <br>
-                <input type="text">
+                <input type="text" name="surname">
             </label>
             <br>
             <hr>
             <label>
                 Wpisz hasło do twojego konta: <br>
-                <input type="password" >
+                <input type="password" name="password">
             </label>
             <br>
             <label>
                 Twój email: <br>
-                <input type="email" >
+                <input type="email" name="email">
             </label>
             <br>
             <hr>
             <label>
                 Wprowadź date spotkania która ci najbardziej pasuje: <br>
-                <input type="date" >
+                <input type="date" name="date">
             </label>
             <br>
             <label>
                 Ile masz spraw do załatwienia: <br>
-                <select>
-                    <option>Jedną</option>
-                    <option>Dwie</option>
-                    <option>Więcej niż trzy</option>
+                <select name="how_many_tasks">
+                    <option value="one">Jedną</option>
+                    <option value="two">Dwie</option>
+                    <option value="three">Więcej niż trzy</option>
                 </select>
             </label>
             <br>
@@ -107,22 +106,22 @@
             <label>
                 Jestem klientem prywatnym: <br>
                 Tak
-                <input type="radio" name="private">
+                <input type="radio" name="private" value="yes" checked>
             </label>
             <label>
                 Nie
-            <input type="radio" name="private">
+            <input type="radio" name="private" value="no">
             </label>
             <br>
             <br>
             <label>
                 Mam sprawę związaną z: <br>
                 Stroną internetową
-                <input type="checkbox" > <br>
+                <input type="checkbox" name="website"> <br>
             </label>
             <label>
                 Sklepem stacjonarnym
-                <input type="checkbox" >
+                <input type="checkbox" name="shop">
             </label>
             <br>
             <hr>
