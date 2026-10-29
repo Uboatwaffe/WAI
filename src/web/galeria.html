@@ -9,6 +9,17 @@
     <title>Żeglarstwo - moje hobby</title>
 
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui-theme.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#tabs" ).tabs();
+        } );
+    </script>
 </head>
 <body>
 
@@ -66,21 +77,43 @@
     <main>
         <h1>PRODUKTY NA SPRZEDAŻ</h1>
 
-
-
         <div class="gallery">
-            <a href="img/1.jpg" target="_blank">
-                <img class="photo" src="img/1.jpg" alt="Zdjęcie niedostępne"></a>
-            <a href="img/2.jpg" target="_blank">
-                <img class="photo" src="img/2.jpg" alt="Zdjęcie niedostępne"></a>
-            <a href="img/3.jpg" target="_blank">
-                <img class="photo" src="img/3.jpg" alt="Zdjęcie niedostępne"></a>
-            <a href="img/4.jpg" target="_blank">
-                <img class="photo" src="img/4.jpg" alt="Zdjęcie niedostępne"></a>
-            <a href="img/5.jpg" target="_blank">
-                <img class="photo" src="img/5.jpg" alt="Zdjęcie niedostępne"></a>
-            <a href="img/6.jpg" target="_blank">
-                <img class="photo" src="img/6.jpg" alt="Zdjęcie niedostępne"></a>
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1">Kamizelka</a></li>
+                    <li><a href="#tabs-2">Lina</a></li>
+                    <li><a href="#tabs-3">Żagiel</a></li>
+                    <li><a href="#tabs-4">Boja</a></li>
+                    <li><a href="#tabs-5">Śruba napędowa</a></li>
+                    <li><a href="#tabs-6">Koło sterowe</a></li>
+                </ul>
+
+                <div id="tabs-1">
+                <a href="img/1.jpg" target="_blank">
+                    <img class="photo" src="img/1.jpg" alt="Zdjęcie niedostępne"></a>
+
+                </div>
+                <div id="tabs-2">
+                    <a href="img/2.jpg" target="_blank">
+                    <img class="photo" src="img/2.jpg" alt="Zdjęcie niedostępne"></a>
+                </div>
+                <div id="tabs-3">
+                    <a href="img/3.jpg" target="_blank">
+                    <img class="photo" src="img/3.jpg" alt="Zdjęcie niedostępne"></a>
+                </div>
+                <div id="tabs-4">
+                    <a href="img/4.jpg" target="_blank">
+                    <img class="photo" src="img/4.jpg" alt="Zdjęcie niedostępne"></a>
+                </div>
+                <div id="tabs-5">
+                    <a href="img/5.jpg" target="_blank">
+                    <img class="photo" src="img/5.jpg" alt="Zdjęcie niedostępne"></a>
+                </div>
+                <div id="tabs-6">
+                    <a href="img/6.jpg" target="_blank">
+                    <img class="photo" src="img/6.jpg" alt="Zdjęcie niedostępne"></a>
+                </div>
+            </div>
         </div>
     </main>
 

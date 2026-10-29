@@ -66,67 +66,30 @@
     <main>
         <h2>FORMULARZ KONTAKTOWY</h2>
 
-        <form action="zasob.php" method="POST">
+        <form id="form" action="zasob.php" method="POST">
 
-            <label>
-                Wpisz swoje imie: <br>
-                <input type="text" name="name">
-            </label>
+            <label for="name">Wpisz swoje imie:</label> <br>
+            <input type="text" id="name" name="name" required>
+
             <br>
-            <label>
-                Wpisz swoje nazwisko: <br>
-                <input type="text" name="surname">
-            </label>
-            <br>
-            <hr>
-            <label>
-                Wpisz hasło do twojego konta: <br>
-                <input type="password" name="password">
-            </label>
-            <br>
-            <label>
-                Twój email: <br>
-                <input type="email" name="email">
-            </label>
+
+            <label for="password">Wpisz swoje hasło:</label> <br>
+            <input type="password" id="password" name="password" required>
+
             <br>
             <hr>
-            <label>
-                Wprowadź date spotkania która ci najbardziej pasuje: <br>
-                <input type="date" name="date">
-            </label>
+
+            <label for="password2">Wpisz swoje hasło ponownie:</label> <br>
+            <input type="password" id="password2" name="password2" required>
+
             <br>
-            <label>
-                Ile masz spraw do załatwienia: <br>
-                <select name="how_many_tasks">
-                    <option value="one">Jedną</option>
-                    <option value="two">Dwie</option>
-                    <option value="three">Więcej niż trzy</option>
-                </select>
-            </label>
+
+            <label for="file">Twój załącznik:</label><br>
+            <input type="file" id="file" name="file" required>
+
             <br>
             <hr>
-            <label>
-                Jestem klientem prywatnym: <br>
-                Tak
-                <input type="radio" name="private" value="yes" checked>
-            </label>
-            <label>
-                Nie
-            <input type="radio" name="private" value="no">
-            </label>
-            <br>
-            <br>
-            <label>
-                Mam sprawę związaną z: <br>
-                Stroną internetową
-                <input type="checkbox" name="website"> <br>
-            </label>
-            <label>
-                Sklepem stacjonarnym
-                <input type="checkbox" name="shop">
-            </label>
-            <br>
-            <hr>
+
             <input type="submit"  value="Wyślij">
             <input type="reset" value="Wyczyść">
 
@@ -142,6 +105,19 @@
     </footer>
 
 </div>
+
+
+<script>
+    document.getElementById('form').addEventListener('submit' , function(event) {
+        const pass1 = document.getElementById('password').value;
+        const pass2 = document.getElementById('password2').value;
+
+        if (pass1 !== pass2) {
+            event.preventDefault();
+            alert('Passwords must match');
+        }
+    })
+</script>
 
 
 </body>

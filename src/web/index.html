@@ -8,6 +8,26 @@
     <title>Żeglarstwo - moje hobby</title>
 
     <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui-theme.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#accordion" ).accordion();
+        } );
+
+        $("#accordion").accordion({
+            collapsible: true,
+            heightStyle: "content",
+            active: 0,
+            icons: {
+                header: "ui-icon-plus",
+                activeHeader: "ui-icon-minus"
+            }
+        });
+    </script>
 </head>
 <body>
 
@@ -63,34 +83,61 @@
     </nav>
 
     <main>
-
-        <p id="top_of_doc">
-            Żeglarstwo to wyjątkowa pasja, która pozwala odkrywać nowe miejsca, cieszyć się bliskością natury i poczuć prawdziwą wolność na wodzie. Odpowiednio dobrany sprzęt, niezawodne wyposażenie oraz sprawdzone akcesoria zapewniają komfort i bezpieczeństwo podczas każdej wyprawy. Nasza firma oferuje produkty dla miłośników żeglarstwa, zarówno początkujących, jak i doświadczonych żeglarzy. Stawiamy na jakość, funkcjonalność i trwałość, aby każda chwila spędzona pod żaglami była pełna satysfakcji. Pomagamy przygotować się do krótkich rejsów i dalekich podróży.
-        </p>
-
         <button onclick="document.getElementById('bottom').scrollIntoView()">Przewiń stronę</button>
 
-        <p>
-            Planując rejs, warto zadbać o odpowiednie wyposażenie łodzi oraz wygodę całej załogi. W naszej ofercie znajdziesz akcesoria żeglarskie, odzież dostosowaną do zmiennych warunków pogodowych i praktyczne rozwiązania ułatwiające życie na pokładzie. Wybieramy produkty, które sprawdzają się zarówno podczas spokojnych rejsów po jeziorach, jak i na bardziej wymagających wodach. Zależy nam, aby każdy klient mógł znaleźć wyposażenie odpowiadające jego potrzebom. Dzięki temu przygotowanie do kolejnej przygody staje się prostsze i przyjemniejsze.
-        </p>
-        <p>
-            Bezpieczeństwo na wodzie zaczyna się od dobrego przygotowania. Kamizelki ratunkowe, liny, cumy, środki nawigacyjne i odpowiednie oświetlenie to elementy, których nie powinno zabraknąć na żadnej jednostce pływającej. Warto regularnie sprawdzać stan wyposażenia i uzupełniać je o niezbędne akcesoria. Odpowiednia wiedza oraz wysokiej jakości sprzęt pomagają pewniej poruszać się po wodzie i lepiej reagować na zmieniające się warunki. Naszym celem jest wspieranie żeglarzy w świadomym i bezpiecznym rozwijaniu ich pasji.
-        </p>
-        <p>
-            Żeglarstwo to również sztuka planowania trasy, obserwowania pogody i współpracy z załogą. Każdy rejs wymaga uwzględnienia kierunku wiatru, siły fal oraz specyfiki akwenu. Dobrze przygotowana wyprawa pozwala uniknąć niepotrzebnych trudności i w pełni cieszyć się czasem spędzonym na wodzie. Warto inwestować w praktyczne wyposażenie nawigacyjne, mapy i akcesoria, które ułatwiają orientację podczas podróży. Dzięki nim odkrywanie nowych portów i malowniczych zatok staje się jeszcze bardziej komfortowe.
-        </p>
-        <p>
-            W naszej ofercie znajdziesz także produkty, które zwiększają wygodę podczas dłuższych wypraw. Funkcjonalna odzież, wodoodporne torby, pojemniki na niezbędne drobiazgi oraz akcesoria pokładowe pomagają utrzymać porządek i dobrze przygotować się na różne sytuacje. Szczególną uwagę zwracamy na materiały odporne na wilgoć, wiatr i intensywne użytkowanie. Wierzymy, że praktyczne rozwiązania mają ogromne znaczenie dla komfortu każdego żeglarza. Dlatego starannie dobieramy asortyment, uwzględniając potrzeby osób spędzających na wodzie zarówno kilka godzin, jak i wiele dni.
-        </p>
-        <p>
-            Nasza firma rozwija swoją działalność na rynku europejskim, oferując miłośnikom żeglarstwa dostęp do starannie wyselekcjonowanego wyposażenia. Prowadzimy sklepy w Berlinie i Wilnie, dzięki czemu możemy docierać do klientów z różnych części Europy. Obie lokalizacje stanowią miejsca, w których żeglarze mogą zapoznać się z naszą ofertą i znaleźć produkty przydatne podczas kolejnych wypraw. Łączymy zainteresowanie żeglarstwem z dbałością o jakość obsługi oraz praktyczne potrzeby naszych klientów. Chcemy, aby każdy, niezależnie od doświadczenia, mógł przygotować się do bezpiecznej i udanej przygody na wodzie.
-        </p>
-        <p>
-            Pasja do żeglarstwa nie kończy się na zakupie odpowiedniego sprzętu. To także poznawanie nowych akwenów, zdobywanie doświadczenia i dzielenie się wiedzą z innymi miłośnikami wodnych podróży. Warto rozwijać swoje umiejętności, poznawać zasady nawigacji i uczyć się właściwego reagowania na zmieniającą się pogodę. Dobrze dobrane wyposażenie pomaga skupić się na tym, co najważniejsze — przyjemności płynącej z żeglowania. Niezależnie od tego, czy planujesz pierwszy rejs, czy przygotowujesz się do kolejnej dalekiej wyprawy, jesteśmy gotowi pomóc Ci znaleźć rozwiązania dopasowane do Twoich potrzeb.
-        </p>
-        <p>
-            Każda podróż pod żaglami zaczyna się od pomysłu i odpowiedniego przygotowania. Niezależnie od tego, czy wybierasz spokojne jezioro, nadmorski port czy wielodniowy rejs, warto postawić na sprzęt, na którym można polegać. Zapraszamy do poznania naszej oferty oraz odwiedzenia sklepów w Berlinie i Wilnie. Naszym celem jest wspieranie żeglarzy na każdym etapie ich przygody — od wyboru pierwszych akcesoriów po kompletowanie wyposażenia na wymagające wyprawy. Odkrywaj nowe miejsca, rozwijaj swoją pasję i ciesz się każdą chwilą spędzoną na wodzie.
-        </p>
+        <div id="accordion">
+            <h3>Wstęp</h3>
+            <div>
+                <p id="top_of_doc">
+                    Żeglarstwo to wyjątkowa pasja, która pozwala odkrywać nowe miejsca, cieszyć się bliskością natury i poczuć prawdziwą wolność na wodzie. Odpowiednio dobrany sprzęt, niezawodne wyposażenie oraz sprawdzone akcesoria zapewniają komfort i bezpieczeństwo podczas każdej wyprawy. Nasza firma oferuje produkty dla miłośników żeglarstwa, zarówno początkujących, jak i doświadczonych żeglarzy. Stawiamy na jakość, funkcjonalność i trwałość, aby każda chwila spędzona pod żaglami była pełna satysfakcji. Pomagamy przygotować się do krótkich rejsów i dalekich podróży.
+                </p>
+            </div>
+
+
+            <h3>Planowanie rejsu</h3>
+            <div>
+                <p>
+                    Planując rejs, warto zadbać o odpowiednie wyposażenie łodzi oraz wygodę całej załogi. W naszej ofercie znajdziesz akcesoria żeglarskie, odzież dostosowaną do zmiennych warunków pogodowych i praktyczne rozwiązania ułatwiające życie na pokładzie. Wybieramy produkty, które sprawdzają się zarówno podczas spokojnych rejsów po jeziorach, jak i na bardziej wymagających wodach. Zależy nam, aby każdy klient mógł znaleźć wyposażenie odpowiadające jego potrzebom. Dzięki temu przygotowanie do kolejnej przygody staje się prostsze i przyjemniejsze.
+                </p>
+            </div>
+
+            <h3>Bezpieczeństwo</h3>
+            <div>
+                <p>
+                    Bezpieczeństwo na wodzie zaczyna się od dobrego przygotowania. Kamizelki ratunkowe, liny, cumy, środki nawigacyjne i odpowiednie oświetlenie to elementy, których nie powinno zabraknąć na żadnej jednostce pływającej. Warto regularnie sprawdzać stan wyposażenia i uzupełniać je o niezbędne akcesoria. Odpowiednia wiedza oraz wysokiej jakości sprzęt pomagają pewniej poruszać się po wodzie i lepiej reagować na zmieniające się warunki. Naszym celem jest wspieranie żeglarzy w świadomym i bezpiecznym rozwijaniu ich pasji.
+                </p>
+            </div>
+
+            <h3>Żeglarstwo</h3>
+            <div>
+                <p>
+                    Żeglarstwo to również sztuka planowania trasy, obserwowania pogody i współpracy z załogą. Każdy rejs wymaga uwzględnienia kierunku wiatru, siły fal oraz specyfiki akwenu. Dobrze przygotowana wyprawa pozwala uniknąć niepotrzebnych trudności i w pełni cieszyć się czasem spędzonym na wodzie. Warto inwestować w praktyczne wyposażenie nawigacyjne, mapy i akcesoria, które ułatwiają orientację podczas podróży. Dzięki nim odkrywanie nowych portów i malowniczych zatok staje się jeszcze bardziej komfortowe.
+                </p>
+            </div>
+
+            <h3>Oferta</h3>
+            <div>
+                <p>
+                    W naszej ofercie znajdziesz także produkty, które zwiększają wygodę podczas dłuższych wypraw. Funkcjonalna odzież, wodoodporne torby, pojemniki na niezbędne drobiazgi oraz akcesoria pokładowe pomagają utrzymać porządek i dobrze przygotować się na różne sytuacje. Szczególną uwagę zwracamy na materiały odporne na wilgoć, wiatr i intensywne użytkowanie. Wierzymy, że praktyczne rozwiązania mają ogromne znaczenie dla komfortu każdego żeglarza. Dlatego starannie dobieramy asortyment, uwzględniając potrzeby osób spędzających na wodzie zarówno kilka godzin, jak i wiele dni.
+                </p>
+            </div>
+
+            <h3>Informacje dodatkowe</h3>
+            <div>
+                <p>
+                    Nasza firma rozwija swoją działalność na rynku europejskim, oferując miłośnikom żeglarstwa dostęp do starannie wyselekcjonowanego wyposażenia. Prowadzimy sklepy w Berlinie i Wilnie, dzięki czemu możemy docierać do klientów z różnych części Europy. Obie lokalizacje stanowią miejsca, w których żeglarze mogą zapoznać się z naszą ofertą i znaleźć produkty przydatne podczas kolejnych wypraw. Łączymy zainteresowanie żeglarstwem z dbałością o jakość obsługi oraz praktyczne potrzeby naszych klientów. Chcemy, aby każdy, niezależnie od doświadczenia, mógł przygotować się do bezpiecznej i udanej przygody na wodzie.
+                </p>
+                <p>
+                    Pasja do żeglarstwa nie kończy się na zakupie odpowiedniego sprzętu. To także poznawanie nowych akwenów, zdobywanie doświadczenia i dzielenie się wiedzą z innymi miłośnikami wodnych podróży. Warto rozwijać swoje umiejętności, poznawać zasady nawigacji i uczyć się właściwego reagowania na zmieniającą się pogodę. Dobrze dobrane wyposażenie pomaga skupić się na tym, co najważniejsze — przyjemności płynącej z żeglowania. Niezależnie od tego, czy planujesz pierwszy rejs, czy przygotowujesz się do kolejnej dalekiej wyprawy, jesteśmy gotowi pomóc Ci znaleźć rozwiązania dopasowane do Twoich potrzeb.
+                </p>
+                <p>
+                    Każda podróż pod żaglami zaczyna się od pomysłu i odpowiedniego przygotowania. Niezależnie od tego, czy wybierasz spokojne jezioro, nadmorski port czy wielodniowy rejs, warto postawić na sprzęt, na którym można polegać. Zapraszamy do poznania naszej oferty oraz odwiedzenia sklepów w Berlinie i Wilnie. Naszym celem jest wspieranie żeglarzy na każdym etapie ich przygody — od wyboru pierwszych akcesoriów po kompletowanie wyposażenia na wymagające wyprawy. Odkrywaj nowe miejsca, rozwijaj swoją pasję i ciesz się każdą chwilą spędzoną na wodzie.
+                </p>
+            </div>
+        </div>
+
+        <br>
+        <br>
 
         <svg fill="#000000" height="20vh" width="20vw" id="bottom" xmlns="http://www.w3.org/2000/svg"
              viewBox="0 0 178.826 178.826" xml:space="preserve">
