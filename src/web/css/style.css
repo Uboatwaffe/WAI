@@ -50,7 +50,6 @@ header {
     text-align: center;
     color: lightgray;
     position : relative;
-    animation: fade_in_left 0.5s;
 }
 
 nav {
@@ -60,7 +59,6 @@ nav {
     display: flex;
     position: relative;
     z-index: 20;
-    animation: fade_in_right 1s;
 }
 
 main {
@@ -70,16 +68,14 @@ main {
     text-align: center;
     background-color: beige;
     padding: 3vh;
-    animation: fade_in_left 1.5s;
 }
 
 footer {
     height: 9vh;
     text-align: center;
-    background: #3b782c;
+    background: #782c3b;
     clear: both;
     font-size: 2.5vh;
-    animation: fade_in_bottom 1s;
 }
 
 #container {
@@ -125,6 +121,7 @@ footer {
     position: relative;
     text-align: center;
     top: 35%;
+    color: lightgray;
     transform: translate(-50%, -50%);
 }
 
@@ -163,15 +160,7 @@ footer {
     scale: 1.1;
 }
 
-@keyframes fade_in_left {
-    0% {left: -100%}
-    100% {left: 0}
-}
 
-@keyframes fade_in_right {
-    0% {right: -100%}
-    100% {right: 0}
-}
 
 
 @media screen and (max-width: 800px) {
