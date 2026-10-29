@@ -213,6 +213,57 @@
     pointer-events: none;
 }
 
+.cookie-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-200%);
+    width: 90%;
+    max-width: 450px;
+    padding: 20px;
+    background: #d4c8b7;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    text-align: center;
+}
+
+.cookie-popup h3 {
+    margin-top: 0;
+}
+
+.cookie-popup p {
+    line-height: 1.5;
+}
+
+.cookie-popup button {
+    padding: 10px 18px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#accept-cookies {
+    background: #6c2835;
+    color: white;
+}
+
+#reject-cookies {
+    background: #ddd;
+    color: #222;
+}
+
+.cookie-popup button:hover {
+    opacity: 0.85;
+}
+
+.cookie-popup[hidden] {
+    display: none;
+}
+
 /* ==============================
    Responsywność
    ============================== */

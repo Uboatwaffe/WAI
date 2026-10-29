@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>WAI</title>
+
+    <link rel="stylesheet" href="css/jquery.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -28,7 +31,51 @@
 
 
         <main>
-            <h2>Ktrótka informacja</h2>
+            <br>
+
+            <h3>
+                Formularz
+            </h3>
+
+            <hr>
+
+            <form id="form" action="zasob.php" method="POST">
+                <label for="username">Username:</label><br>
+                <input id="username" name="username" type="text" title="This is required" required>
+
+                <br>
+                <br>
+
+                <label for="pass">Password:</label><br>
+                <input type="password" id="pass" name="password" required>
+
+                <br>
+                <br>
+
+                <label for="pass2">Repeat your password:</label><br>
+                <input type="password" name="password2" id="pass2" required>
+
+                <br>
+                <br>
+
+                <label for="file">File:</label><br>
+                <input type="file" id="file" name="file" required>
+
+                <br>
+                <br>
+
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+
+                <hr>
+            </form>
+
+            <br>
+            <br>
+
+            <h2>Krótka informacja</h2>
+
+            <br>
 
             <div id="accordion">
 
@@ -58,40 +105,42 @@
                 </div>
             </div>
 
+            <br>
+            <br>
 
+            <h3>Dodatkowe informacje</h3>
 
-            <h3>
-                Formularz
-            </h3>
+            <br>
 
-            <hr>
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1">Planowanie rejsu</a></li>
+                    <li><a href="#tabs-2">Węzły żeglarskie</a></li>
+                    <li><a href="#tabs-3">Pogoda na wodzie</a></li>
+                    <li><a href="#tabs-4">Żeglarstwo turystyczne</a></li>
+                    <li><a href="#tabs-5">Praca załogi</a></li>
+                </ul>
 
-            <form id="form" action="zasob.php" method="POST">
-                <label for="username">Username:</label><br>
-                <input id="username" name="username" type="text" required>
+                <div id="tabs-1">
+                    <p>Planowanie rejsu żeglarskiego wymaga odpowiedniego przygotowania oraz uwzględnienia wielu czynników wpływających na bezpieczeństwo i komfort załogi. Przed wypłynięciem należy określić trasę, sprawdzić prognozę pogody i zapoznać się z charakterystyką akwenu. Ważne jest również ustalenie miejsc, w których można bezpiecznie zacumować jacht lub schronić się w przypadku pogorszenia warunków atmosferycznych. Dobrze przygotowany plan pozwala uniknąć niepotrzebnego ryzyka i sprawia, że rejs staje się przyjemniejszy.</p>
+                </div>
 
-                <hr>
+                <div id="tabs-2">
+                    <p>Węzły żeglarskie stanowią jeden z podstawowych elementów wiedzy każdego żeglarza. Wykorzystuje się je do mocowania lin, przywiązywania jachtu do nabrzeża oraz zabezpieczania różnych elementów wyposażenia. Do najczęściej stosowanych należą węzeł ratowniczy, ósemkowy i knagowy, które różnią się zastosowaniem oraz sposobem wiązania. Opanowanie tych umiejętności wymaga regularnych ćwiczeń, ponieważ w sytuacjach awaryjnych liczy się szybkość i precyzja działania. Znajomość węzłów zwiększa bezpieczeństwo i ułatwia wykonywanie codziennych czynności na pokładzie.</p>
+                </div>
 
-                <label for="pass">Password:</label><br>
-                <input type="password" id="pass" name="password" required><br>
+                <div id="tabs-3">
+                    <p>Pogoda odgrywa niezwykle ważną rolę w żeglarstwie, ponieważ wpływa na prędkość jachtu, kierunek żeglugi i bezpieczeństwo załogi. Żeglarze powinni umieć rozpoznawać zmiany zachodzące na niebie, obserwować siłę wiatru oraz zwracać uwagę na komunikaty meteorologiczne. Nagłe burze, silne podmuchy wiatru i ograniczona widoczność mogą znacznie utrudnić prowadzenie jednostki. Dlatego przed każdym rejsem warto sprawdzić aktualną prognozę i przygotować się na możliwe zmiany warunków. Umiejętność właściwej oceny pogody pomaga podejmować rozsądne decyzje i unikać niebezpiecznych sytuacji.</p>
+                </div>
 
-                <br>
+                <div id="tabs-4">
+                    <p>Żeglarstwo turystyczne pozwala odkrywać nowe miejsca i poznawać przyrodę z perspektywy wody. Podczas rejsów po jeziorach można odwiedzać niewielkie porty, zatrzymywać się w malowniczych zatokach i podziwiać otaczające krajobrazy. Dłuższe wyprawy morskie dają natomiast możliwość poznawania odległych wybrzeży, lokalnych tradycji oraz kultury odwiedzanych regionów. Życie na jachcie wymaga dobrej organizacji, współpracy i umiejętności dostosowania się do zmiennych warunków. Dzięki temu każda podróż staje się okazją do zdobywania doświadczenia, rozwijania samodzielności i przeżywania niezapomnianych przygód.</p>
+                </div>
 
-                <label for="pass2">Repeat your password:</label><br>
-                <input type="password" name="password2" id="pass2" required>
-
-                <hr>
-
-                <label for="file">File:</label><br>
-                <input type="file" id="file" name="file" required>
-
-                <hr>
-
-                <button type="reset">Reset</button>
-                <button type="submit">Submit</button>
-
-                <hr>
-            </form>
+                <div id="tabs-5">
+                    <p>Współpraca załogi jest niezbędna do sprawnego i bezpiecznego prowadzenia jachtu. Każdy członek załogi powinien znać swoje obowiązki, wykonywać polecenia sternika i komunikować się z pozostałymi osobami na pokładzie. Podczas manewrów, takich jak zwrot przez sztag, zwrot przez rufę czy cumowanie, ważne są odpowiednia koordynacja i wzajemne zaufanie. Dobra atmosfera sprzyja rozwiązywaniu problemów oraz ułatwia radzenie sobie w trudnych sytuacjach. Żeglarstwo uczy odpowiedzialności, cierpliwości i współdziałania, a zdobyte umiejętności mogą być przydatne również w codziennym życiu.</p>
+                </div>
+            </div>
 
 
         </main>
@@ -101,30 +150,52 @@
         </footer>
     </div>
 
-    <script>
-    document.getElementById('form').addEventListener('submit', (e) => {
-    const pass1 = document.getElementById('pass').value;
-    const pass2 = document.getElementById('pass2').value;
+    <div id="cookie-popup" class="cookie-popup">
+        <h3>Cookies</h3>
+        <p>
+            This website uses cookies to improve your browsing experience.
+            You can accept or reject non-essential cookies.
+        </p>
+        <button id="accept-cookies">Accept</button>
+        <button id="reject-cookies">Reject</button>
+    </div>
 
-    if (pass1 !== pass2) {
-    e.preventDefault();
-    alert('Passwords do not match!');
-    }
-    })
+
+
+
+    <script>
+        const cookiePopup = document.getElementById("cookie-popup");
+        const acceptButton = document.getElementById("accept-cookies");
+        const rejectButton = document.getElementById("reject-cookies");
+
+        // Check whether the visitor has already chosen
+        if (localStorage.getItem("cookieChoice") === "accepted") {
+            cookiePopup.hidden = true;
+        }
+
+        acceptButton.addEventListener("click", function () {
+            localStorage.setItem("cookieChoice", "accepted");
+            cookiePopup.hidden = true;
+        });
+
+        rejectButton.addEventListener("click", function () {
+            alert("This site can't function properly without cookies")
+        });
     </script>
 
-    <link rel="stylesheet" href="css/jquery.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.min.js"></script>
+    <script src="js/instructions.js"></script>
     <script>
+        $( function() {
+            $( "#tabs" ).tabs();
+        } );
+
         $(function () {
             $("#accordion").accordion({
                 heightStyle: "content",
                 animate: false
             });
-
-            $("#tabs").tabs();
         });
     </script>
 </body>
