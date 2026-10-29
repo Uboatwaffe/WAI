@@ -1,184 +1,83 @@
-body {
+html, body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: lightgray;
+}
+
+h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
-p {
-    font-family: sans-serif;
-}
-
-a {
-    color: lightgray;
-}
-
-a:hover{
-    color: grey;
-}
-
-hr {
-    border-color: black;
-}
-
-input {
-    margin-bottom: 1vh;
-}
-
-select {
-    margin-bottom: 1vh;
-}
-
-table {
-    min-width: 100%;
-}
-
-td, th {
-    min-width: 25%;
-}
-
-table, td, th {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-table a {
-    color: black;
-    text-decoration: none;
-}
-
-header {
-    background: #2c3b78;
-    height: 16vh;
-    text-align: center;
-    color: lightgray;
-    position : relative;
-}
-
-nav {
-    text-align: center;
-    height: 12vh;
-    background: #782c3b;
-    display: flex;
-    position: relative;
-    z-index: 20;
-}
-
-main {
-    position:relative;
-    min-height: 57vh;
-    height: 100%;
-    text-align: center;
-    background-color: beige;
-    padding: 3vh;
-}
-
-footer {
-    height: 9vh;
-    text-align: center;
-    background: #782c3b;
-    clear: both;
-    font-size: 2.5vh;
-}
-
-#container {
-    position: relative;
-    background-color: beige;
+h1 {
+    font-size: 5.5vh;
 }
 
 .centered {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 23%;
+    position: relative;
 }
 
-.title {
+.centered2 {
+    top: 33%;
+    position: relative;
+}
+
+header {
+    background-color: #2c3b78;
     text-align: center;
-    color: lightgray;
-    font-size: 8vh;
-    top: 10%;
+    height: 15vh;
+    margin: 0;
+}
+
+nav{
+    margin: 0;
+    background-color: #782c3b;
+    height: 10vh;
+}
+
+main {
+    min-height: 57vh;
+    background-color: beige;
+    padding: 4vh;
+    color: black;
+}
+
+footer {
+    background-color: #782c3b;
+    height: 10vh;
 }
 
 .item {
+    left: 33vw;
     position: relative;
-    float: left;
-    width: 33.33vw;
-    color: lightgray;
-    font-size: 3vh;
-    padding-top: 3vh;
-    min-height: 9vh;
-    transition: 1s;
+    width: 33vw;
+    height: 100%;
+    font-size: 2vh;
 }
 
 .item:hover {
     background-color: #6c2835;
     color: grey;
+    transition: 1s;
 }
 
-#main p:first-child::first-letter {
-    color: gray;
-    font-size: 6vh;
-}
-
-#footer_down {
-    position: relative;
-    text-align: center;
-    top: 35%;
-    color: lightgray;
-    transform: translate(-50%, -50%);
-}
-
-.drop_down {
-    position: absolute;
-    top: 100%;
-    transform: translate(0%);
-    display: none;
-    background-color: #6c2835;
-    min-width: 33.33vw;
-    min-height: 15vh;
-    padding: 0;
-    z-index: 20;
-}
-
-.item:hover .drop_down {
-    display: block;
-}
-
-.drop_down a {
-    color: lightgray;
+a {
     text-decoration: none;
+    color: lightgrey;
 }
-
-.drop_down a:hover {
-    color: gray;
-}
-
-.photo {
-    margin: 1.5vh;
-    width: 41vw;
-    height: 20vw;
-}
-
-.photo:hover {
-    scale: 1.1;
-}
-
-
-
 
 @media screen and (max-width: 800px) {
     header {
         background-color: blueviolet;
     }
+}
 
-    nav {
-        flex-direction: column;
-        height: auto;
-        width: 100%;
-    }
+/* Hide the accordion until it has been initialized */
+#accordion:not(.ui-accordion) {
+    visibility: hidden;
+}
 
-    .item {
-        width: 100%;
-    }
-
-    .drop_down {
-        width: 100%;
-    }
+#accordion.ui-accordion {
+    visibility: visible;
 }

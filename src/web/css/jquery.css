@@ -1,0 +1,238 @@
+.ui-widget {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: #33302e;
+}
+
+.ui-widget,
+.ui-widget * {
+    box-sizing: border-box;
+}
+
+.ui-helper-reset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    line-height: 1.3;
+    text-decoration: none;
+    list-style: none;
+}
+
+.ui-helper-clearfix::before,
+.ui-helper-clearfix::after {
+    content: "";
+    display: table;
+    border-collapse: collapse;
+}
+
+.ui-helper-clearfix::after {
+    clear: both;
+}
+
+/* ==============================
+   Wspólne elementy
+   ============================== */
+
+.ui-widget-content {
+    border: 1px solid #d4c8b7;
+    background: #f0e7d8;
+    color: #33302e;
+}
+
+.ui-widget-content a {
+    color: #6c2835;
+}
+
+.ui-widget-header {
+    border: 1px solid #6c2835;
+    background: #6c2835;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.ui-state-default {
+    border: 1px solid #d4c8b7;
+    background: #e6dac8;
+    color: #33302e;
+    font-weight: normal;
+}
+
+.ui-state-default a {
+    color: #33302e;
+    text-decoration: none;
+}
+
+/* Hover i focus */
+
+.ui-state-hover,
+.ui-state-focus {
+    border-color: #2c3b78;
+    background: #e1dfeb;
+    color: #2c3b78;
+}
+
+.ui-state-hover a,
+.ui-state-focus a {
+    color: #2c3b78;
+}
+
+/* Aktywny element */
+
+.ui-state-active {
+    border: 1px solid #6c2835;
+    background: #6c2835;
+    color: #ffffff;
+}
+
+.ui-state-active a {
+    color: #ffffff;
+}
+
+/* Widoczny fokus klawiatury */
+
+.ui-state-focus {
+    outline: 2px solid #2c3b78;
+    outline-offset: 2px;
+}
+
+/* ==============================
+   Accordion
+   ============================== */
+
+.ui-accordion .ui-accordion-header {
+    display: block;
+    position: relative;
+    margin: 2px 0 0;
+    padding: 0.7em 1em;
+    cursor: pointer;
+    font-size: 100%;
+    border: 1px solid #d4c8b7;
+    border-radius: 3px;
+    background: #e6dac8;
+    color: #6c2835;
+}
+
+.ui-accordion .ui-accordion-header:hover {
+    border-color: #2c3b78;
+    background: #e1dfeb;
+    color: #2c3b78;
+}
+
+.ui-accordion .ui-accordion-header.ui-accordion-header-active {
+    border-color: #6c2835;
+    background: #6c2835;
+    color: #ffffff;
+}
+
+.ui-accordion .ui-accordion-content {
+    padding: 1em 1.4em;
+    border: 1px solid #d4c8b7;
+    border-top: 0;
+    background: #f0e7d8;
+    color: #33302e;
+    overflow: auto;
+}
+
+/* ==============================
+   Tabs
+   ============================== */
+
+.ui-tabs {
+    position: relative;
+    padding: 0.3em;
+    border: 1px solid #d4c8b7;
+    border-radius: 3px;
+    background: #f0e7d8;
+}
+
+.ui-tabs .ui-tabs-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin: 0;
+    padding: 0.2em 0.2em 0;
+    border: 0;
+    background: transparent;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #d4c8b7;
+    border-bottom: 0;
+    border-radius: 3px 3px 0 0;
+    background: #e6dac8;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    display: block;
+    padding: 0.65em 1em;
+    color: #6c2835;
+    text-decoration: none;
+}
+
+.ui-tabs .ui-tabs-nav li:hover {
+    border-color: #2c3b78;
+    background: #e1dfeb;
+}
+
+.ui-tabs .ui-tabs-nav li:hover .ui-tabs-anchor {
+    color: #2c3b78;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    margin-bottom: -1px;
+    padding-bottom: 1px;
+    border-color: #6c2835;
+    background: #6c2835;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+    color: #ffffff;
+    cursor: default;
+}
+
+.ui-tabs .ui-tabs-panel {
+    display: block;
+    padding: 1em 1.2em;
+    border: 1px solid #d4c8b7;
+    background: #f0e7d8;
+    color: #33302e;
+}
+
+/* ==============================
+   Wyłączone elementy
+   ============================== */
+
+.ui-state-disabled {
+    opacity: 0.45;
+    cursor: default !important;
+    pointer-events: none;
+}
+
+/* ==============================
+   Responsywność
+   ============================== */
+
+@media (max-width: 600px) {
+    .ui-tabs .ui-tabs-nav {
+        gap: 4px;
+    }
+
+    .ui-tabs .ui-tabs-nav li {
+        flex: 1 1 auto;
+    }
+
+    .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+        padding: 0.6em 0.7em;
+        text-align: center;
+    }
+
+    .ui-accordion .ui-accordion-content,
+    .ui-tabs .ui-tabs-panel {
+        padding: 0.8em;
+    }
+}
