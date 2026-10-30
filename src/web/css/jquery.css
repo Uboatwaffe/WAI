@@ -329,6 +329,7 @@
         height: 75vh;
     }
 }
+
 #featureContainer .carousel-inner .carousel-item-end,
 #featureContainer .carousel-inner .carousel-item-start {
     transform: translateX(0);
