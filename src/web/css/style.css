@@ -67,6 +67,11 @@ a {
     color: lightgrey;
 }
 
+a:hover {
+    text-decoration: none;
+    color: lightgrey;
+}
+
 /* Hide the accordion until it has been initialized */
 #accordion:not(.ui-accordion) {
     visibility: hidden;
