@@ -1,3 +1,6 @@
+const weather_button = document.getElementById('get-weather');
+const weather_response = document.getElementById('weather');
+
 document.getElementById('form').addEventListener('submit', (e) => {
     const pass1 = document.getElementById('pass').value;
     const pass2 = document.getElementById('pass2').value;
@@ -7,9 +10,6 @@ document.getElementById('form').addEventListener('submit', (e) => {
         alert('Passwords do not match!');
     }
 })
-
-const weather_button = document.getElementById('get-weather');
-const weather_response = document.getElementById('weather');
 
 weather_button.addEventListener('click', (e) => {
 
