@@ -36,6 +36,13 @@
 
 
         <main>
+            <noscript>
+                <p style="color: red; font-size: 3vh;">
+                    Masz wyłączone skrypty w przeglądarce, część funkcji nie będzie działać!
+                </p>
+            </noscript>
+
+
             <br>
 
             <h3>
@@ -71,7 +78,7 @@
 
                 <input type="hidden" name="source" value="formularz-wai">
 
-                <label for="disabled-field">Pole nieaktywne:</label>
+                <label for="disabled-field">Pole nieaktywne:</label> <br>
                 <input
                         type="text"
                         id="disabled-field"
@@ -272,8 +279,6 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/instructions.js"></script>
     <script src="js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.min.js"></script>
     <script>
         $( function() {
             $( "#tabs" ).tabs();
