@@ -94,7 +94,6 @@
             </form>
 
             <br>
-            <br>
 
             <h2>Krótka informacja</h2>
 
@@ -111,6 +110,16 @@
 
             <div id="response">
                 <div id="someText">Tekst w środku div-a o id = someText</div>
+            </div>
+
+            <hr>
+
+            <h3>Informacja o ciasteczkach</h3>
+
+            <br>
+
+            <div>
+                <p id="cookieInfo">Nie wybrałeś jeszcze żadnych cookies!</p>
             </div>
 
             <br>
@@ -293,11 +302,13 @@
                 sessionStorage.setItem("cookieChoice", "accepted");
                 cookiePopup.hidden = true;
                 document.cookie = "slepy=true";
+                updateCookieInfo();
             });
 
             rejectButton.addEventListener("click", function () {
                 sessionStorage.setItem("cookieChoice", "rejected");
                 cookiePopup.hidden = true;
+                updateCookieInfo();
             });
         } else {
             cookiePopup.hidden = true;

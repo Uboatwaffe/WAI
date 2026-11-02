@@ -80,3 +80,17 @@ function modify() {
     parent.appendChild(newDiv);
 
 }
+
+function updateCookieInfo(){
+    const response = document.getElementById('cookieInfo');
+
+    if(sessionStorage.getItem('cookieChoice') === 'accepted'){
+        response.innerHTML = 'Wybrałeś wszystkie ciasteczka';
+    } else if(sessionStorage.getItem('cookieChoice') === 'rejected'){
+        response.innerHTML = 'Wybrałeś tylko wymagane ciasteczka';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateCookieInfo();
+})
