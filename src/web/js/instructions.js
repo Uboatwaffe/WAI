@@ -55,11 +55,11 @@ weather_button.addEventListener('click', (e) => {
 })
 
 function resetText(){
-    document.getElementById('response').style.fontSize = '1em';
+    document.getElementById('response').style.fontSize = '2vh';
 }
 
 function shrinkText(){
-    document.getElementById('response').style.fontSize = '1.5vh';
+    document.getElementById('response').style.fontSize = '1vh';
 }
 
 function enlargeText(){
@@ -67,9 +67,16 @@ function enlargeText(){
 }
 
 function modify() {
+    const parent = document.getElementById('response');
+
     document.getElementById('someText').remove();
 
-    const parent = document.getElementById('response');
-    parent.innerHTML = '<div id="changed">Tekst w środku div-a o id = changed</div>';
+    const newDiv = document.createElement('div');
+    newDiv.id = 'newDiv';
+
+    const text = document.createTextNode('W zmienionej strukturze');
+
+    newDiv.appendChild(text);
+    parent.appendChild(newDiv);
 
 }
