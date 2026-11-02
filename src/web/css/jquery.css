@@ -1,4 +1,9 @@
-.ui-widget {
+
+/* ==============================
+   Wspólne elementy jQuery UI
+   ============================== */
+
+.ui-widget * {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
     color: #33302e;
@@ -119,7 +124,7 @@
     color: #2c3b78;
 }
 
-.ui-accordion .ui-accordion-header.ui-accordion-header-active {
+.ui-accordion .ui-accordion-header-active {
     border-color: #6c2835;
     background: #6c2835;
     color: #ffffff;
@@ -213,11 +218,15 @@
     pointer-events: none;
 }
 
+/* ==============================
+   Okno cookies
+   ============================== */
+
 .cookie-popup {
     position: fixed;
     bottom: 20px;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%);
     width: 90%;
     max-width: 450px;
     padding: 20px;
@@ -264,6 +273,10 @@
     display: none;
 }
 
+/* ==============================
+   Kontener
+   ============================== */
+
 .container {
     padding-right: 15px;
     padding-left: 15px;
@@ -271,7 +284,8 @@
     margin-left: auto;
 }
 
-/* Hide the accordion until it has been initialized */
+/* Ukrycie Accordion przed inicjalizacją */
+
 #accordion:not(.ui-accordion) {
     visibility: hidden;
 }
@@ -280,32 +294,33 @@
     visibility: visible;
 }
 
+/* ==============================
+   Responsywność kontenera
+   ============================== */
+
 @media (min-width: 768px) {
     .container {
         width: 750px;
     }
 }
+
 @media (min-width: 992px) {
     .container {
         width: 970px;
     }
 }
+
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
     }
 }
 
+/* ==============================
+   Karuzela
+   ============================== */
 
-
-@media (max-width: 767px) {
-    #featureContainer .carousel-inner .carousel-item > div {
-        display: none;
-    }
-    #featureContainer .carousel-inner .carousel-item > div:first-child {
-        display: block;
-    }
-}
+/* Ustawienie elementów karuzeli */
 
 #featureContainer .carousel-inner .carousel-item.active,
 #featureContainer .carousel-inner .carousel-item-next,
@@ -313,7 +328,31 @@
     display: flex;
 }
 
-/* medium and up screens */
+/* Zdjęcia - zachowanie proporcji */
+
+#featureContainer .card-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+#featureContainer .card-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Karty karuzeli */
+
+#featureContainer .card {
+    border: 0;
+    position: relative;
+}
+
+/* Średnie i większe ekrany */
+
 @media (min-width: 768px) {
 
     #featureContainer .carousel-inner .carousel-item-end.active,
@@ -325,65 +364,73 @@
     #featureContainer .carousel-inner .carousel-item-prev {
         transform: translateX(-25%);
     }
-    #featureContainer .card img{
-        width: 90%;
-        height: 40vh;
-    }
-    #featureContainer .carousel-item{
+
+    #featureContainer .carousel-item {
         justify-content: space-between;
     }
 }
+
+/* Małe ekrany */
+
 @media (max-width: 767px) {
-    #featureContainer .card img{
-        width: 100%;
-        height: 75vh;
+
+    #featureContainer .carousel-inner .carousel-item > div {
+        display: none;
+    }
+
+    #featureContainer .carousel-inner .carousel-item > div:first-child {
+        display: block;
     }
 }
+
+/* Animacja przesuwania */
 
 #featureContainer .carousel-inner .carousel-item-end,
 #featureContainer .carousel-inner .carousel-item-start {
     transform: translateX(0);
 }
-#featureContainer .card{
-    border: 0;
-}
-#featureContainer .card{
-    position: relative;
-}
-#featureContainer .card .card-img-overlays{
+
+/* Nakładka na zdjęcia */
+
+#featureContainer .card-img-overlays {
     position: absolute;
     bottom: 15%;
     left: 10%;
     color: #fff;
     font-weight: bolder;
 }
-#featureContainer a{
+
+/* Linki karuzeli */
+
+#featureContainer a {
     text-decoration: none;
 }
-#featureContainer .indicator{
+
+/* Przyciski nawigacji */
+
+#featureContainer .indicator {
     border: 1px solid rgb(202, 202, 202);
-    padding: 3px 6px 3px 6px;
+    padding: 3px 6px;
+    color: lightgray;
 }
-#featureContainer .indicator:hover{
+
+#featureContainer .indicator:hover {
     background-color: blue;
     border: 1px solid blue;
-    transition: 200ms;
-}
-#featureContainer .indicator:hover{
     color: white;
     transition: 200ms;
 }
-#featureContainer .indicator {
-    color: lightgray;
-}
-#featureContainer .float-end{
+
+#featureContainer .float-end {
     padding-top: 10px;
 }
+
 /* ==============================
-   Responsywność
+   Responsywność jQuery UI
    ============================== */
 
 @media (max-width: 600px) {
+
     .ui-tabs .ui-tabs-nav {
         gap: 4px;
     }
