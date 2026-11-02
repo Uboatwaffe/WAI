@@ -53,3 +53,23 @@ weather_button.addEventListener('click', (e) => {
         weather_response.innerText = 'Could not get current location!';
     }
 })
+
+function resetText(){
+    document.getElementById('response').style.fontSize = '1em';
+}
+
+function shrinkText(){
+    document.getElementById('response').style.fontSize = '1.5vh';
+}
+
+function enlargeText(){
+    document.getElementById('response').style.fontSize = '30px';
+}
+
+function modify() {
+    document.getElementById('someText').remove();
+
+    const parent = document.getElementById('response');
+    parent.innerHTML = '<div id="changed">Tekst w środku div-a o id = changed</div>';
+
+}
