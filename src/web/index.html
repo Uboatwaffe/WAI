@@ -277,11 +277,10 @@
 
 
     <script>
-        function isSessionStorageAvailable() {
+        function isLocalStorageAvailable() {
             try {
-                const testKey = "__storage_test__";
-                sessionStorage.setItem(testKey, "test");
-                sessionStorage.removeItem(testKey);
+                localStorage.setItem("test", "test");
+                localStorage.removeItem("test");
                 return true;
             } catch (e) {
                 return false;
@@ -292,21 +291,21 @@
         const acceptButton = document.getElementById("accept-cookies");
         const rejectButton = document.getElementById("reject-cookies");
 
-        if (isSessionStorageAvailable()) {
+        if (isLocalStorageAvailable()) {
 
-            if (sessionStorage.getItem("cookieChoice")) {
+            if (localStorage.getItem("cookieChoice")) {
                 cookiePopup.hidden = true;
             }
 
             acceptButton.addEventListener("click", function () {
-                sessionStorage.setItem("cookieChoice", "accepted");
+                localStorage.setItem("cookieChoice", "accepted");
                 cookiePopup.hidden = true;
                 document.cookie = "slepy=true";
                 updateCookieInfo();
             });
 
             rejectButton.addEventListener("click", function () {
-                sessionStorage.setItem("cookieChoice", "rejected");
+                localStorage.setItem("cookieChoice", "rejected");
                 cookiePopup.hidden = true;
                 updateCookieInfo();
             });

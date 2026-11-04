@@ -11,10 +11,10 @@ document.getElementById('form').addEventListener('submit', (e) => {
     }
 })
 
-weather_button.addEventListener('click', (e) => {
+weather_button.addEventListener('click', () => {
 
     if ("geolocation" in navigator) {
-        navigator.geolocation.getCurrentPosition(position => {
+
             weather_response.innerHTML = `Pobieranie pogody...`;
 
             navigator.geolocation.getCurrentPosition(
@@ -48,7 +48,7 @@ weather_button.addEventListener('click', (e) => {
                 }
             );
 
-        })
+
     } else {
         weather_response.innerText = 'Could not get current location!';
     }
@@ -63,7 +63,7 @@ function shrinkText(){
 }
 
 function enlargeText(){
-    document.getElementById('response').style.fontSize = '30px';
+    document.getElementById('response').style.fontSize = '3vh';
 }
 
 function modify() {

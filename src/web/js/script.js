@@ -16,5 +16,3 @@ $(document).ready(function(){
     $('#featureCarousel').carousel({interval: false});
     $('#featureCarousel').carousel('pause');
 });
-
-// This is code from the JQuery plugin
