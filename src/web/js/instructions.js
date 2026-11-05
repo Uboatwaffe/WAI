@@ -69,7 +69,9 @@ function enlargeText(){
 function modify() {
     const parent = document.getElementById('response');
 
-    document.getElementById('someText').remove();
+    if (document.getElementById('someText')){
+        document.getElementById('someText').remove();
+    }
 
     const newDiv = document.createElement('div');
     newDiv.id = 'newDiv';
@@ -84,9 +86,9 @@ function modify() {
 function updateCookieInfo(){
     const response = document.getElementById('cookieInfo');
 
-    if(sessionStorage.getItem('cookieChoice') === 'accepted'){
+    if(localStorage.getItem('cookieChoice') === 'accepted'){
         response.innerHTML = 'Wybrałeś wszystkie ciasteczka';
-    } else if(sessionStorage.getItem('cookieChoice') === 'rejected'){
+    } else if(localStorage.getItem('cookieChoice') === 'rejected'){
         response.innerHTML = 'Wybrałeś tylko wymagane ciasteczka';
     }
 }
