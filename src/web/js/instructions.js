@@ -7,7 +7,7 @@ document.getElementById('form').addEventListener('submit', (e) => {
 
     if (pass1 !== pass2) {
         e.preventDefault();
-        alert('Passwords do not match!');
+        alert('Hasła nie są takie same!');
     }
 })
 

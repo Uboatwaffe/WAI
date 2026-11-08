@@ -264,20 +264,24 @@
     <div id="cookie-popup" class="cookie-popup">
         <h3>Cookies</h3>
         <p>
-            Ta strona używa plików cookies jeśli naciśniesz 'Akceptuj' tenże popup zniknie i się już
-            nie pojawi. Jeżeli wybierzesz opcje 'Odrzuć' popup ten się schowa lecz się pokaże przy kolejnym załadowaniu strony
+            Ta strona używa plików cookies.
         </p>
         <button id="accept-cookies">Akceptuj</button>
         <button id="reject-cookies">Odrzuć</button>
     </div>
 
 
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery.css">
     <link rel="stylesheet" href="css/style.css">
 
 
     <script>
+
+        function deleteCookie(name) {
+            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+        }
+
         function isLocalStorageAvailable() {
             try {
                 localStorage.setItem("test", "test");
@@ -308,6 +312,7 @@
             rejectButton.addEventListener("click", function () {
                 localStorage.setItem("cookieChoice", "rejected");
                 cookiePopup.hidden = true;
+                deleteCookie('slepy');
                 updateCookieInfo();
             });
         } else {
